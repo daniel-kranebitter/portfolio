@@ -56,24 +56,75 @@ a:hover {
   text-decoration: underline;
 }
 
+/* Verbesserte Basis-Bildstile */
 img {
-  max-width: 60%;
-  padding: 4px;
+  max-width: 100%;
   height: auto;
   border-radius: 20px;
   display: block;
+  margin: 0 auto;
+  padding: 4px;
+  box-sizing: border-box;
 }
 
+/* Container für bessere Bildkontrolle */
+.image-container {
+  width: 100%;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.image-container img {
+  margin: 0 auto;
+}
+
+/* Spezifische Bildklassen */
 .portrait {
-  max-width: 240px;
+  max-width: min(240px, 80vw);
   width: 100%;
   height: auto;
 }
 
 .smallimg {
-  max-width: 200px;
+  max-width: min(200px, 60vw);
   width: 100%;
   height: auto;
+}
+
+.fullwidth {
+  max-width: 100%;
+  width: 100%;
+}
+
+.responsive-img {
+  max-width: min(60%, 500px);
+  width: 100%;
+}
+
+/* Lazy Loading Support */
+img[loading="lazy"] {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+img[loading="lazy"].loaded {
+  opacity: 1;
+}
+
+/* Tablet-Ansicht */
+@media screen and (max-width: 1024px) {
+  img {
+    max-width: 80%;
+    border-radius: 18px;
+  }
+  
+  .portrait {
+    max-width: min(280px, 70vw);
+  }
+  
+  .smallimg {
+    max-width: min(180px, 50vw);
+  }
 }
 
 /* Mobile-spezifische Anpassungen */
@@ -81,34 +132,39 @@ img {
   header {
     padding: 1.5rem 1rem;
   }
-  
+ 
   header h1 {
     font-size: 2rem;
   }
-  
+ 
   header p {
     font-size: 1rem;
   }
-  
+ 
   .section {
     padding: 1rem;
   }
-  
+ 
   .project {
     padding: 1rem;
     margin-bottom: 1rem;
   }
-  
+ 
   img {
+    max-width: 90%;
     border-radius: 15px;
   }
-  
+ 
   .portrait {
-    max-width: 250px;
+    max-width: min(250px, 85vw);
+  }
+ 
+  .smallimg {
+    max-width: min(150px, 70vw);
   }
   
-  .smallimg {
-    max-width: 120px;
+  .responsive-img {
+    max-width: 90%;
   }
 }
 
@@ -117,29 +173,49 @@ img {
   header {
     padding: 1rem;
   }
-  
+ 
   header h1 {
     font-size: 1.5rem;
   }
-  
+ 
   .section {
     padding: 0.5rem;
   }
-  
+ 
   .project {
     padding: 0.75rem;
     border-radius: 5px;
   }
-  
+ 
   img {
+    max-width: 95%;
     border-radius: 10px;
+    padding: 2px;
   }
-  
+ 
   .portrait {
-    max-width: 200px;
+    max-width: min(200px, 90vw);
+  }
+ 
+  .smallimg {
+    max-width: min(120px, 80vw);
   }
   
-  .smallimg {
-    max-width: 100px;
+  .responsive-img {
+    max-width: 95%;
+  }
+}
+
+/* Performance-Optimierungen */
+img {
+  image-rendering: auto;
+  image-rendering: crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+/* Retina-Display Unterstützung */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  img {
+    image-rendering: -webkit-optimize-contrast;
   }
 }
