@@ -48,7 +48,7 @@ body {
   grid-template-columns: 1.1fr 0.9fr;
   align-items: start; /* Text + Bild oben ausrichten */
   gap: 20px; /* Abstand Text ↔ Bild */
-  padding: 170px 84px 60px 120px; /* Oben: 80px für "Chill" Abstand, unten: 60px */
+  padding: 190px 84px 60px 140px; /* Oben: 80px für "Chill" Abstand, unten: 60px */
 
   /* Hintergrund kompakt halten */
   background: linear-gradient(
