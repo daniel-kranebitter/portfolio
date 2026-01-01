@@ -1,6 +1,6 @@
-Portfolio
+#Portfolio
 
-Wöfür ich stehe. Was ich bin.
+##Wöfür ich stehe. Was ich bin.
 
 Hier erhalten Sie nicht nur einen Einblick in ausgewählte Projekte, sondern auch in eine größere Vision, die weit über einzelne Arbeiten hinausgeht.
 Tauchen Sie in diese Vision ein und gewinnen Sie einen kompakten Überblick über meine Fähigkeiten, meine Denkweise und meine Umsetzungskompetenz.
