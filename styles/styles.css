@@ -141,6 +141,26 @@ span.gradient {
   object-position: bottom center;
 }
 
+/* Transition */
+.hero-content,
+.hero-image {
+  opacity: 0;
+  transform: translateY(0px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.hero-loaded .hero-content {
+  opacity: 1;
+  transform: translateY(-104px);
+  transition-delay: 0.2s; /* leicht verzögert für Effekt */
+}
+
+.hero-loaded .hero-image {
+  opacity: 1;
+  transform: translateY(-50px);
+  transition-delay: 0.5s; /* Bild etwas später */
+}
+
 /* Features */
 .features {
   padding: 96px 64px;
@@ -161,7 +181,7 @@ span.gradient {
 
 .feature-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 32px;
 }
 
@@ -181,15 +201,23 @@ span.gradient {
 }
 
 .project-thumb {
-    max-width: 400px;
-    border-radius: 14px;
-    margin: 1rem 0;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin: 1rem;
 }
 
 .project-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
   color: white;
-  display: block;
-  width: 600px;
+
+  width: 100%;
+  max-width: 400px;
   padding: 1.6rem;
   border-radius: 18px;
   background: #0f172a;
@@ -215,16 +243,37 @@ span.gradient {
   margin-top: 2.4rem;
 }
 
-.contact-card {
-  display: block;
+.contact-card { 
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  width: 80%;
+  max-width: 500px;
+  margin: 20px auto;
   padding: 1.6rem;
   border-radius: 18px;
   background: #1f2937;
   border: 1px solid #2a2a2a;
   text-decoration: none;
-  transition: transform .15s ease, border .15s ease;
+  transition: transform 0.15s ease, border 0.15s ease, box-shadow 0.15s ease;
 }
+
+.contact-card:hover {
+  transform: translateY(-4px);
+  border-color: #2563eb;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.contact-card a {
+  color: #2563eb;
+  text-decoration: none;
+  transition: text-decoration 0.15s ease;
+}
+
+.contact-card a:hover {
+  text-decoration: underline dotted;
+}
+
 
 /* ============= TABLET (<= 1024px) ============= */
 @media (max-width: 1024px) {
