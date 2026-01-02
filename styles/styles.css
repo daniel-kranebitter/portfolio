@@ -1,0 +1,219 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+body {
+  color: #0f172a;
+  background: #f8fafc;
+}
+
+/* Navbar */
+.navbar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 24px 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+.logo {
+  color: white;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.navbar nav a {
+  margin-left: 32px;
+  text-decoration: none;
+  color: #e5e7eb;
+  font-size: 0.95rem;
+}
+
+.nav-btn {
+  padding: 8px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 6px;
+}
+
+/* Hero */
+.hero {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+
+  padding: 190px 180px 60px 240px; /* Oben: 80px für "Chill" Abstand, unten: 60px */
+
+  align-items: center;
+
+  min-height: 100vh;
+  width: 100%;
+
+  /* Hintergrund kompakt halten */
+  background: linear-gradient(
+      to right,
+      rgba(15, 23, 42, 0.85),
+      rgba(15, 23, 42, 0.6)
+    ),
+    url("../pictures/TechLightEffects.png") top right / contain no-repeat;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: white;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Text oben ausrichten */
+  transform: translateY(-105px);
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  margin-bottom: 24px;
+}
+
+span.gradient {
+  background: radial-gradient(
+    circle,
+    rgba(59, 130, 246, 1) 0%,
+    rgba(18, 81, 181, 1) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  max-width: 520px;
+  opacity: 0.9;
+  margin-bottom: 40px;
+  
+}
+
+.cta {
+  display: flex;
+  gap: 16px;
+}
+
+.btn {
+  padding: 14px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.primary {
+  background: #2563eb;
+  color: white;
+}
+
+.secondary {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: white;
+}
+
+/* Hero Image */
+.hero-image {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+
+  transform: translateY(-50px);
+}
+
+.hero-image img {
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: bottom center;
+}
+
+/* Features */
+.features {
+  padding: 96px 64px;
+  background: white;
+}
+
+.features h2 {
+  color: #2563eb;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.features h3 {
+  font-size: 2.2rem;
+  margin-bottom: 48px;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.feature-card {
+  padding: 32px;
+  border-radius: 16px;
+  background: #f1f5f9;
+}
+
+.feature-card h4 {
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+}
+
+.feature-card p {
+  color: #475569;
+}
+
+.project-card {
+  display: block;
+  padding: 1.6rem;
+  border-radius: 18px;
+  background: #0e0e0e;
+  border: 1px solid #2a2a2a;
+  text-decoration: none;
+  transition: transform .15s ease, border .15s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  border-color: #6b7cff;
+}
+
+.project-card .tag {
+  display: inline-block;
+  margin-top: .8rem;
+  font-size: .8rem;
+  opacity: .7;
+}
+
+.projects-cta {
+  text-align: center;
+  margin-top: 2.4rem;
+}
+
+.contact-card {
+  display: block;
+  align-items: center;
+  padding: 1.6rem;
+  border-radius: 18px;
+  background: #1f2937;
+  border: 1px solid #2a2a2a;
+  text-decoration: none;
+  transition: transform .15s ease, border .15s ease;
+}

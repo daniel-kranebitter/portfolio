@@ -4,24 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio – Daniel Kranebitter</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
   <header class="navbar">
     <div class="logo">DANIEL KRANEBITER</div>
     <nav>
-      <a href="#">Über mich</a>
-      <a href="#">Projekte</a>
-      <a href="#">Leistungen</a>
-      <a href="#">Kontakt</a>
-      <a href="#" class="nav-btn">LinkedIn</a>
+      <a href="index.html">Über mich</a>
+      <a href="pages/projects.html">Projekte</a>
+      <a href="pages/contact.html">Kontakt</a>
+      <a href="https://www.linkedin.com/in/daniel-kranebitter-b1b7273a2/" target="_blank" class="nav-btn">LinkedIn</a>
     </nav>
   </header>
 
    <section class="hero">
     <div class="hero-content">
       <h1>
-        Ich denke <span>Technologie</span><br />
+        Ich denke <span class="gradient">Technologie</span><br />
         in Zusammenhängen.
       </h1>
       <p>Schon früh faszinierte mich an Technologie nicht nur das Technische, sondern besonders das, was sie im Zusammenspiel bewirkt. 
@@ -31,14 +30,13 @@
   
 
       <div class="cta">
-        <a href="#" class="btn primary">Meine Projekte</a>
-        <a href="#" class="btn secondary">Mehr erfahren</a>
+        <a href="pages/projects.html" class="btn primary">Meine Projekte</a>
+        <a href="pages/services" class="btn secondary">Mehr erfahren</a>
       </div>
     </div>
 
     <div class="hero-image">
-      <!-- Platzhalter – später eigenes Bild -->
-      <img src="Pictures/DanielVisionary.png"
+      <img src="pictures/DanielVisionary.png"
            alt="Portrait" />
     </div>
   </section>
@@ -64,5 +62,61 @@
       </div>
     </div>
   </section>
+
+<section class="projects">
+  <h2>Woran ich arbeite</h2>
+  <h3>Ausgewählte Projekte</h3>
+
+  <div class="feature-grid">
+
+    <a href="pages/projects.html#general-recommender" class="project-card">
+      <img src="pictures/projects/ai-platform-thumb.jpg" alt="AI Plattform Thumbnail" class="project-thumb">
+
+      <h4>AI-gestützte Empfehlungsplattform</h4>
+      <p>Ein Projekt im Informatikunterricht wird einsatzfähig</p>
+      <span class="tag">Technologie & Strategie</span>
+    </a>
+
+    <a href="pages/projects.html#automation" class="project-card">
+      <img src="pictures/projects/automation-thumb.jpg" alt="Automatisierung Thumbnail" class="project-thumb">
+
+      <h4>Prozessautomatisierung im Unternehmen</h4>
+      <p>Digitale Workflows & Effizienzsteigerung.</p>
+      <span class="tag">Business Prozesse</span>
+    </a>
+
+    <a href="pages/projects.html#dream-game" class="project-card">
+      <img src="pictures/projects/gamedev-thumb.jpg" alt="Game Development Thumbnail" class="project-thumb">
+
+      <h4>Game- & Experience-Design</h4>
+      <p>Interaktive Umgebungen & User Experience.</p>
+      <span class="tag">Creative Tech</span>
+    </a>
+
+    <a href="pages/projects.html#time-monster" class="project-card">
+      <img src="pictures/projects/Monster.png" alt="Game Development Thumbnail" class="project-thumb">
+
+      <h4>3D-Modellierung</h4>
+      <p>Interaktive Umgebungen & User Experience.</p>
+      <span class="tag">Creative Tech</span>
+    </a>
+
+    <a href="pages/projects.html#monetize" class="project-card">
+      <img src="pictures/projects/MoneyStack.png" alt="Entworfene Währung" class="project-thumb">
+
+      <h4>Monitarisierung & Marketing</h4>
+      <p>Interaktive Umgebungen & User Experience.</p>
+      <span class="tag">Monitarisierung & Marketing</span>
+    </a>
+
+  </div>
+
+  <div class="projects-cta">
+    <a href="pages/projects.html" class="btn primary">
+      Alle Projekte ansehen
+    </a>
+  </div>
+</section>
+
 </body>
 </html>
