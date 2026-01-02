@@ -58,6 +58,12 @@ body {
     margin: 1rem 0;
 }
 
+.project-section img.small-project-image {
+  width: 200px;
+  height: auto;
+  margin: 6px;
+}
+
 .tag {
     display: inline-block;
     padding: .35rem .7rem;
