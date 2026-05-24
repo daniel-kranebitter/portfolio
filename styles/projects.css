@@ -1,38 +1,10 @@
-
 /* Base styling */
 body {
-    font-family: system-ui, Arial, sans-serif;
-    line-height: 1.6;
-    margin-top: 26px;
-    padding-top: 100px; /* navbar height */
+    padding-top: 72px; /* navbar height */
     background: #0f172a; /* dark background */
     color: white;
 }
 
-/* Navbar */
-.navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    padding: 24px 64px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: rgba(15, 23, 42, 0.9); /* semi-transparent navbar */
-    z-index: 1000;
-}
-
-.navbar a {
-    color: #e5e7eb;
-    text-decoration: none;
-    margin-left: 32px;
-}
-
-.navbar .nav-btn {
-    padding: 8px 16px;
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    border-radius: 6px;
-}
 
 /* Project sections */
 .project-section {
